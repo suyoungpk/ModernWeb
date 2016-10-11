@@ -1,0 +1,544 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="css/oneid.css">
+<script type="text/javascript" src="js/jquery1.11.1.js"></script>
+<script type="text/javascript" src="js/oneid.js"></script>
+<style type="text/css">
+	h1{font-weight:800;font-size:1.25rem;padding:0.5em;color:#000}
+	body > div > div{padding:0.5rem}
+	.oneid-wrap .btn-close,
+	.oneid-wrap .btn-help{position:relative}
+</style>
+</head>
+<body>
+	<div class="oneid-wrap">
+		<div class="white-round-box" id="font">
+			<h1>폰트 종류</h1>
+			<div>
+				<p style="font-weight:400">본고딕 light</p>
+				<p style="font-weight:700">본고딕 regular</p>
+				<p style="font-weight:800">본고딕 bold</p>
+			</div>
+		</div>
+		<div class="white-round-box" id="tab-style">
+			<div>
+				<ul class="tab-style">
+					<li class="on"><a href="#">간편 정보 인증</a></li>
+					<li><a href="#">본인 인증</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="white-round-box" id="btn-area">
+			<h1>버튼 디자인</h1>
+			<div>
+				<div class="btn-area"><button class="btn-style one" ontouchstart="">로그인</button></div><br>
+				<div class="btn-area"><button class="btn-style one" ontouchstart="" disabled>로그인</button> </div><br>
+				<div class="btn-area"><button class="btn-style double" ontouchstart="">취소</button><button class="btn-style double">확인</button></div><br>
+				<div class="btn-area">
+					<button class="btn-style one" ontouchstart=""><img src="images/ico_phone.png" alt="" />휴대폰 본인 인증</button><br><br>
+					<button class="btn-style one" ontouchstart=""><img src="images/ico_ipin.png" alt="" />아이핀 인증</button><br><br>
+					<button class="btn-style one" ontouchstart=""><img src="images/ico_mail.png" alt="" />이메일 인증 가입</button><br><br>
+					<button class="btn-style one" ontouchstart=""><img src="images/ico_sms.png" alt="" />SMS 인증 가입</button><br><br>
+					<button class="btn-style one" ontouchstart=""><img src="images/ico_uplus.png" alt="" />U+ 본인 인증</button>
+				</div>
+			<br><br>
+			<button class="btn-account active" ontouchstart=""><span class="chk">사용</span><span class="id">lguplus8080@gmail.com</span> <span class="btn-del">계정삭제</span></button><br><br>
+			<button class="btn-account" ontouchstart=""><!-- <span class="chk">사용</span> --><span class="id">lguplus8080@gmail.com</span> <span class="btn-del">계정삭제</span></button>
+			<br><br>
+				<a href="#" class="btn-close">닫기</a>&nbsp;&nbsp;&nbsp;<a href="#" class="btn-close disabled" ontouchstart="">닫기</a><br><br>
+				<a href="#" class="btn-help">도움말</a>&nbsp;&nbsp;&nbsp;<a href="#" class="btn-help disabled" ontouchstart="">도움말</a><br><br>
+				
+				<div>
+					<button class="btn-style2 btn-send" ontouchstart="">인증번호 전송</button>
+					<button class="btn-style2 disabled btn-send" ontouchstart="">인증번호 전송</button>
+				</div>
+
+				<div>
+					<button class="btn-style2 btn-oneid-chg" ontouchstart="">ONE ID 전환</button>
+					<button class="btn-style2 disabled btn-oneid-chg" ontouchstart="">ONE ID 전환</button>
+				</div>
+				<div>
+					<button class="btn-style2" ontouchstart="">비밀번호 변경</button>
+					<button class="btn-style2" ontouchstart="">번호변경</button>
+				</div>
+				<div>
+					<button class="btn-style3" ontouchstart="">ID 찾기</button>
+					<button class="btn-style3" ontouchstart="" disabled>PW 찾기</button>
+				</div>
+
+				<ul class="snsLogin">
+					<li><a href="#" class="btn-facebook">Facebook 로그인</a></li>
+					<li><a href="#" class="btn-google">Google+ 로그인</a></li>
+				</ul>
+				<p>터치~  <button class="btn-switch" data-role="off" ontouchstart="">off</button></p>
+			</div>
+		</div>
+		<div class="white-round-box" id="input-style">
+			<h1>입력창 디자인</h1>
+			<div>
+				<p class="input-style big"><input type="text" value="" class="holder" id="a"/><label for="a">ONE ID<em>(EMAIL)</em> / U+BOX ID</label></p><br>
+				<p class="input-style small"><input type="email" value=""  class="holder" id="b"/><label for="b">이메일 주소 (ID) 입력</label></p><br>
+				<p class="input-style small"><input type="number" value=""  class="holder" id="c"/><label for="c">인증번호 입력</label></p><br>
+				<p class="input-style small"><input type="password" value=""  class="holder" id="d" /><label for="d">비밀번호 <span>8-20자의 영, 숫자 조합</span></label></p>
+			</div>
+		</div>
+
+		<div class="white-round-box" id="check-style">
+			<h1>체크박스 디자인</h1>
+			<div>
+				<p class="check-style">
+					<input type="checkbox" id="chkid"/>
+					<label for="chkid" ontouchstart="">체크박스</label>
+				</p>&nbsp;
+				<p class="check-style">
+					<input type="checkbox" id="chkid2" disabled="disabled"/>
+					<label for="chkid2" ontouchstart="">체크박스 disabled</label>
+				</p>
+			<br><br>
+				<p class="check-style2">
+					<input type="checkbox" id="chkid3"/>
+					<label for="chkid3" ontouchstart="">체크박스2</label>
+				</p>
+				<p class="check-style2">
+					<input type="checkbox" id="chkid4" disabled="disabled"/>
+					<label for="chkid4" ontouchstart="">체크박스2 disabled</label>
+				</p>
+			</div>
+		</div>
+		<div class="white-round-box" id="radio-style">
+			<h1>라디오 디자인</h1>
+			<div>
+				<p class="radio-style">
+					<input type="radio" id="radio1"/>
+					<label for="radio1" ontouchstart="">라디오버튼</label>
+				</p>&nbsp;
+				<p class="radio-style">
+					<input type="radio" id="radio2" disabled="disabled"/>
+					<label for="radio2" ontouchstart="">라디오버튼 disabled</label>
+				</p>
+			</div>
+		</div>
+		<div class="white-round-box" id="select-box">
+			<h1>셀렉트 디자인</h1>
+			<div>
+				<p  class="select-box">
+					<select name="" id="idname">
+						<option value="">선택1</option>
+						<option value="">선택2</option>
+					</select>
+					<label for="idname" ontouchstart="">선택1</label>
+				</p><br>
+				<p  class="select-box dimmed">
+					<select name="" id="idname2" disabled="disabled">
+						<option value="">선택1</option>
+						<option value="">선택2</option>
+					</select>
+					<label for="idname2" ontouchstart="">선택1</label>
+				</p>
+			</div>
+		</div>
+		<div class="white-round-box" id="inputBox">
+			<h1>입력박스</h1>
+			<div>
+				<ul class="inputBox">
+					<li class="mailBox">
+						<p class="input-style small"><input type="text" value=""  class="holder securityNumber1" id="securityNumber1" /><label for="securityNumber1">이메일 주소 (ID) 입력</label></p>
+						<span class="bar">@</span>
+						<p  class="select-box" ontouchstart="">
+							<select name="" id="email2">
+								<option>선택하세요</option>
+								<option value="">naver.com</option>
+							</select>
+							<label for="email2">선택하세요</label>
+						</p>
+						<div class="idalert safe">
+							<p>사용 가능한 아이디 입니다.</p>
+						</div><!-- idalert -->
+						<div class="idalert danger">
+							<p>이미 사용중인 아이디 입니다.</p>
+						</div><!-- idalert -->
+						<div class="idalert danger2">
+							<p>올바른 이메일 형식이 아닙니다.</p>
+						</div><!-- idalert -->
+					</li>
+					<li class="phoneNumber">
+						<ul>
+							<li><p class="input-style small"><input type="tel" value=""  class="holder" id="phone"/><label for="phone">휴대폰번호</label></p></li>
+							<li>
+								<p  class="select-box" ontouchstart="">
+									<select name="" id="phone2">
+										<option>통신사 선택</option>
+										<option value="">LGU+</option>
+										<option value="">SKT</option>
+										<option value="">KT</option>
+										<option value="">LGU+알뜰폰</option>
+										<option value="">SKT알뜰폰</option>
+										<option value="">KT알뜰폰</option>
+									</select>
+									<label for="phone2">통신사 선택</label>
+								</p>
+							</li>
+						</ul>
+					</li>
+					<li class="phoneNumber">
+						<ul>
+							<li>
+								<p class="input-style small"><input type="email" value=""  class="holder" id="regNumber"/><label for="regNumber">인증번호 입력</label></p>
+							</li>
+							<li><button class="btn-style2 btn-send" ontouchstart="">인증번호 전송</button></li>
+						</ul>
+					</li>
+					<li class="phoneNumber2">
+						<ul>
+							<li>
+								<p  class="select-box" ontouchstart="">
+									<select name="" id="phoneNumber2">
+										<option value="">010</option>
+										<option value="">011</option>
+									</select>
+									<label for="phoneNumber2">010</label>
+								</p>
+							</li>
+							<li class="bar">-</li>
+							<li><p class="input-style small"><input type="tel" value=""  class="holder" id="phone"/><label for="phone">휴대폰번호</label></p></li>
+						</ul>
+					</li>
+					<li class="birth">
+						<ul>
+							<li>
+								<p  class="select-box" ontouchstart="">
+									<select name="" id="birthyear">
+										<option value="">2015</option>
+										<option value="">2014</option>
+									</select>
+									<label for="birthyear">출생년도</label>
+								</p>
+							</li>
+							<li>
+								<p  class="select-box" ontouchstart="">
+									<select name="" id="birthmonth">
+										<option value="">1</option>
+										<option value="">2</option>
+										<option value="">3</option>
+										<option value="">4</option>
+										<option value="">5</option>
+										<option value="">6</option>
+										<option value="">7</option>
+										<option value="">8</option>
+										<option value="">9</option>
+										<option value="">10</option>
+										<option value="">11</option>
+										<option value="">12</option>
+									</select>
+									<label for="birthmonth">월</label>
+								</p>
+							</li>
+							<li>
+								<p  class="select-box" ontouchstart="">
+									<select name="" id="birthdate">
+										<option value="">1</option>
+										<option value="">2</option>
+									</select>
+									<label for="birthdate">일</label>
+								</p>
+							</li>
+						</ul>
+					</li>
+					<li class="gender">
+						<ul>
+							<li><p class="input-style small"><input type="text" value=""  class="holder" id="username"/><label for="username">이름</label></p>
+								<div class="rightBox">
+									<p class="radio-style2"><input type="radio" value=""  name="gender" id="male"/><label for="male">남자</label></p>
+									<p class="radio-style2"><input type="radio" value=""  name="gender" id="female"/><label for="female">여자</label></p>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li class="passwordBox"> <!-- 안전 : safe , 보통 :  normal, 위험 : danger 클래스 추가  -->
+						<p class="input-style small"><input type="password" value=""  class="holder" id="pw1" /><label for="pw1">비밀번호&nbsp;&nbsp;<span>8-20자의 영, 숫자 조합</span></label></p>
+						<div class="pwalert safe">
+							<p class="icon">안전</p>
+							<p>예측이 어려운 비밀번호 입니다.</p>
+						</div><!-- pwalert -->
+						<div class="pwalert danger">
+							<p class="icon">위험</p>
+							<p>예측이 쉬운 비밀번호 입니다.</p>
+						</div><!-- pwalert -->
+						<div class="pwalert normal">
+							<p class="icon">보통</p>
+							<p>보통 수준의 비밀번호 입니다.</p>
+						</div><!-- pwalert -->
+					</li>
+					<li class="passwordBox2">
+						<p class="input-style small"><input type="password" value=""  class="holder" id="pw2" /><label for="pw2">비밀번호 확인</label></p>
+						<div class="pwalert danger">
+							<p class="icon">&nbsp;</p>
+							<p>비밀번호가 일치하지 않습니다</p>
+						</div><!-- pwalert -->
+						<div class="pwalert safe">
+							<p class="icon">&nbsp;</p>
+							<p>비밀번호가 일치합니다.</p>
+						</div><!-- pwalert -->
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="white-round-box" id="Heading">
+			<h1>Contents Heading</h1>
+			<div>
+				<h2>h2 ONE ID 통합 간편 로그인 관리</h2> <br>
+				<h3>h3 간편로그인 정보</h3>
+				<h4>h4 전환/가입 서비스</h4>
+			</div>
+		</div>
+		<div class="white-round-box" id="agre-box-style">
+			<h1>agre-box-style</h1>
+			<div>				
+				<div class="agre-box-style">
+					<span class="agre-box-mask"></span>
+					<p class="tit">약관 및 정보수신 동의</p>
+					<ul>
+						<li>
+							<p class="check-style2">
+								<input type="checkbox" id="agre-chkid1" /><!--  input을 확인하시려면  class="block" 를 붙이면 됩니다. -->
+								<label for="agre-chkid1" ontouchstart="">ONE ID 약관 모두 동의</label>
+							</p>
+							<button class="btn-down" ontouchstart="" ><span>더보기</span></button>
+							<ul>
+								<li>
+									<p class="check-style2">
+										<input type="checkbox" id="agre-chkid1-1" /><!--  input을 확인하시려면  class="block" 를 붙이면 됩니다. -->
+										<label for="agre-chkid1-1" ontouchstart="">서비스 약관 모두 동의</label>
+									</p>
+									<button class="btn-detail" ontouchstart="" ><span>자세히보기</span></button>
+								</li>
+								<li>
+									<p class="check-style2">
+										<input type="checkbox" id="agre-chkid1-2" /><!--  input을 확인하시려면  class="block" 를 붙이면 됩니다. -->
+										<label for="agre-chkid1-2" ontouchstart="">개인정보 수집 및 이용</label>
+									</p>
+									<button class="btn-detail" ontouchstart="" ><span>자세히보기</span></button>
+								</li>
+								<li>
+									<p class="check-style2">
+										<input type="checkbox" id="agre-chkid1-3" /><!--  input을 확인하시려면  class="block" 를 붙이면 됩니다. -->
+										<label for="agre-chkid1-3" ontouchstart="">개인정보 제휴사 제공안내(선택)</label>
+									</p>
+									<button class="btn-detail" ontouchstart="" ><span>자세히보기</span></button>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<p class="check-style2">
+								<input type="checkbox" id="agre-chkid2"/><!--  input을 확인하시려면  class="block" 를 붙이면 됩니다. -->
+								<label for="agre-chkid2" ontouchstart="">서비스 약관 모두 동의</label>
+							</p>
+							<button class="btn-down" ontouchstart="" ><span>더보기</span></button>
+							<ul>
+								<li>
+									<p class="check-style2">
+										<input type="checkbox" id="agre-chkid2-1" /><!--  input을 확인하시려면  class="block" 를 붙이면 됩니다. -->
+										<label for="agre-chkid2-1" ontouchstart="">ONE ID 약관 모두 동의</label>
+									</p>
+									<button class="btn-detail" ontouchstart="" ><span>자세히보기</span></button>
+								</li>
+								<li>
+									<p class="check-style2">
+										<input type="checkbox" id="agre-chkid2-2" /><!--  input을 확인하시려면  class="block" 를 붙이면 됩니다. -->
+										<label for="agre-chkid2-2" ontouchstart="">개인정보 수집 및 이용</label>
+									</p>
+									<button class="btn-detail" ontouchstart="" ><span>자세히보기</span></button>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<p class="check-style2">
+								<input type="checkbox" id="agre-chkid3"/><!--  input을 확인하시려면  class="block" 를 붙이면 됩니다. -->
+								<label for="agre-chkid3" ontouchstart="">정보수신 동의 (선택)</label>
+							</p>
+							<button class="btn-down" ontouchstart="" ><span>더보기</span></button>
+							<ul>
+								<li>
+									<p class="check-style2">
+										<input type="checkbox" id="agre-chkid3-1" /><!--  input을 확인하시려면  class="block" 를 붙이면 됩니다. -->
+										<label for="agre-chkid3-1" ontouchstart="">SMS</label>
+									</p>
+								</li>
+								<li>
+									<p class="check-style2">
+										<input type="checkbox" id="agre-chkid3-2" /><!--  input을 확인하시려면  class="block" 를 붙이면 됩니다. -->
+										<label for="agre-chkid3-2" ontouchstart="">e-mail</label>
+									</p>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<p class="check-style2 all-chk" >
+						<input type="checkbox" id="allchk"/><!--  input을 확인하시려면  class="block" 를 붙이면 됩니다. -->
+						<label for="allchk" ontouchstart="" onclick="allchk()">전체 동의</label>
+					</p>
+				</div><!-- 	agre-box -->	
+
+			</div>
+		</div>
+		<div class="white-round-box" id="topTxt">
+			<h1>topTxt</h1>
+			<div>
+				<p class="topTxt">
+					고객님의 U+ 쇼핑 아이디가 조회되었습니다.<br>
+					ONE ID로 전환 할 아이디를 선택하세요.
+				</p>
+			</div>
+		</div>
+		<div class="white-round-box" id="cfm">
+			<h1>완료 텍스트 .cfm</h1>
+			<div>
+				<div class="cfm">
+					<p><strong>Device_account@gmail.com</strong>로<br>
+					LG U+의 다양한 서비스를 이용하실 수 있습니다</p>
+					<div class="subTxt">
+						<p>U+ ONE ID로 이용 가능한 서비스(16.5월)</p>
+						<p class="mt12">
+							U+홈페이지, 비디오포털, 홈IOT, U+Box, 아이모리, 맘카,<br>
+							매직미러, LTE블랙박스 등
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="white-round-box" id="list-style">
+			<h1>list-style</h1>
+			<div>
+				<ul class="list-style">
+					<li>
+						<strong class="acc">lguplus8080@gmail.com</strong>
+						<p class="right"><button class="btn-style2">비밀번호 변경</button></p>
+					</li>
+					<li>
+						<span class="tit">전화번호</span>
+						<strong>010-1234-5678</strong>
+					</li>
+					<li>
+						U+ Box 외 6개 서비스
+						<p class="right"><button class="btn-detail">상세보기</button></p>
+					</li>
+					<li class="nolist">
+						인증 내역이 없습니다.
+						<p class="right"><button class="btn-style2">인증하기</button></p>
+					</li>
+					<li >
+						SMS 정보수신 동의
+						<div class="right">
+							<p class="check-style2" >
+								<input type="checkbox" id="sms"/><!--  input을 확인하시려면  class="block" 를 붙이면 됩니다. -->
+								<label for="sms" ontouchstart="">&nbsp;</label>
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#" class="btn">간편 로그인 관리</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="white-round-box" id="accountList">
+			<h1>accountList</h1>
+			<div>
+				<ul class="accountList">
+					<li>
+						<p class="radio-style">
+							<input type="radio" name="acc" id="acc-radio1" checked/>
+							<label for="acc-radio1" ontouchstart="">tvG인증 <span>(2013.12.03 가입)</span></label>
+						</p>
+						<p class="txt">
+							기기 인증으로 사용한 내역이므로 ONE ID 전환 후 사용할 수 있습니다.
+						</p>
+					</li>
+					<li>
+						<p class="radio-style">
+							<input type="radio" name="acc" id="acc-radio2"/>
+							<label for="acc-radio2" ontouchstart="">0101234**** <span>(2013.12.03 가입)</span></label>
+						</p>
+						<p class="txt">
+							기기 인증으로 사용한 내역이므로 ONE ID 전환 후 사용할 수 있습니다.
+						</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="white-round-box" id="resultBox">
+			<h1>resultBox</h1>
+			<div>
+				<div class="resultBox">
+					<p class="value">
+						010 1234 5678
+					</p>
+					<p class="txt">
+						ONE ID로 자동 전환됩니다.
+					</p>
+					<ul class="account">
+						<li>lguplus8080 <span>(2013.12.03 가입)</span></li>
+						<li>red1234 <span>(2013.12.03 가입)</span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<style type="text/css">
+		.move{display:none;position:fixed;top:10%;right:0;background:rgba(255,255,255,.8);}
+		.move ul{padding:10px}
+		.move ul li {width:8rem;padding:0.3rem 0;border-top:1px dashed #ececec}
+		.move ul li:first-child{border:0}
+		.move ul li a{font-size:1rem;font-weight:800;color:#535353}
+		.move ul li a:hover{color:blue}
+	</style>
+	<div class="move">
+		<ul>
+			
+				<li><a href="#resultBox">resultBox</a></li>
+
+				<li><a href="#accountList">accountList</a></li>
+
+				<li><a href="#list-style">list-style</a></li>
+
+				<li><a href="#cfm">cfm</a></li>
+
+				<li><a href="#topTxt">topTxt</a></li>
+
+				<li><a href="#agre-box-style">agre-box-style</a></li>
+
+				<li><a href="#Heading">Heading</a></li>
+
+				<li><a href="#inputBox">inputBox</a></li>
+
+				<li><a href="#select-box">select-box</a></li>
+
+				<li><a href="#radio-style">radio-style</a></li>
+
+				<li><a href="#check-style">check-style</a></li>
+
+				<li><a href="#input-style">input-style</a></li>
+
+				<li><a href="#btn-area">btn-area</a></li>
+				<li><a href="#tab-style">tab-style</a></li>
+				<li><a href="#font">font</a></li>
+			
+		</ul>
+	</div>
+	<script type="text/javascript">
+		$(function(){
+			$(window).scroll(function(){
+				$(".move").fadeIn();
+				setTimeout(function(){$(".move").stop().fadeOut();},3000)
+			});
+			
+		})
+	</script>
+</body>
+</html>
